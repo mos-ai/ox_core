@@ -108,6 +108,8 @@ async function OnPlayerDeath() {
   SetEntityInvincible(cache.ped, true);
   SetEntityHealth(cache.ped, health);
   SetEveryoneIgnorePlayer(cache.playerId, true);
+  TriggerEvent("ox:onPlayerDeath", cache.playerId)
+  TriggerServerEvent("ox:onPlayerDeath", cache.playerId)
 }
 
 on('ox:playerLoaded', () => {
